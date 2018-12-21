@@ -1,34 +1,47 @@
-var userData = [{
-    "name":"Ahmed",
-    "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
-    "scores":[
-        5,
-        1,
-        4,
-        4,
-        5,
-        1,
-        2,
-        5,
-        4,
-        1
-      ]
+var userData = [
+  {
+    name: "Amy Klobuchar",
+    photo: app / images / amyklobuchar.jpg,
+    description: "foo",
+    scores: [1, 2]
+  },
+  {
+    name: "Beto O'Rourke",
+    photo: app / images / betoorourke.jpg,
+    description: "foo",
+    scores: [1, 2]
+  },
+  {
+    name: "Joe Biden",
+    photo: app / images / joebiden.jpg,
+    description: "foo",
+    scores: [1, 2]
+  },
+  {
+    name: "Cory Booker",
+    photo: app / images / coreybooker.jpg,
+    description: "foo",
+    scores: [1, 2]
+  },
+  {
+    name: "Kamala Harris",
+    photo: app / images / kamalaharris.jpg,
+    description: "foo",
+    scores: [1, 2]
+  },
+  {
+    name: "Elizabeth Warren",
+    photo: app / images / elizabethwarren.jpg,
+    description: "foo",
+    scores: [1, 2]
   },{
-    "name":"Jeff",
-    "photo":"n/a",
-    "scores":[
-        3,
-        2,
-        1,
-        2,
-        3,
-        4,
-        5,
-        4,
-        3,
-        2
-      ]
-  }]
+    "name":"Bernie Sanders",
+    "photo": app/images/berniesanders.jpg,
+    "description": "foo",
+    "scores": [
+      1,
+      2
+    ]},
+];
 
-  module.exports = userData;
-  
+module.exports = userData;
