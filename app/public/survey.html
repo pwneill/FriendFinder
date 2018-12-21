@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Survey</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"
+  ></script>
     <link
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
       rel="stylesheet"
@@ -16,11 +21,6 @@
       integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
       crossorigin="anonymous"
     ></script>
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.js"
-      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-      crossorigin="anonymous"
-    ></script>
     <link
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
       rel="stylesheet"
@@ -29,15 +29,14 @@
     />
   </head>
   <body>
-    <p>this is a work in progres</p>
     <div class="container">
       <div class="row">
         <div class="col-md-8">
           <form>
-            <h2>Question 1</h2>
+            <h4>How much do you value youth vs experience?</h2>
 
             <div class="form-group">
-              <label for="question1">Example select</label>
+              <label for="question1">Select "1" for most youthful, select "5" for most experienced</label>
               <select class="form-control" id="question1">
                 <option>1</option>
                 <option>2</option>
@@ -47,10 +46,10 @@
               </select>
             </div>
 
-            <h2>Question 2</h2>
+            <h4>Undocumented Immigrants should have a pathway to citizenship</h2>
 
             <div class="form-group">
-              <label for="exampleFormControlSelect2">Example select</label>
+              <label for="question2">1(strongly disagree) to 5 (strongly agree)</label>
               <select class="form-control" id="question2">
                 <option>1</option>
                 <option>2</option>
@@ -60,10 +59,10 @@
               </select>
             </div>
 
-            <h2>Question 3</h2>
+            <h4>On balance, free trade is beneficial for average American</h4>
 
             <div class="form-group">
-              <label for="question3">Example select</label>
+              <label for="question3">1(strongly disagree) to 5 (strongly agree)</label>
               <select class="form-control" id="question3">
                 <option>1</option>
                 <option>2</option>
@@ -72,6 +71,98 @@
                 <option>5</option>
               </select>
             </div>
+
+            <h4>Marijuana should be legalized</h4>
+
+            <div class="form-group">
+              <label for="question4">1(strongly disagree) to 5 (strongly agree)</label>
+              <select class="form-control" id="question4">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+
+            <h4>The US should use military force to settle disputes internationally</h4>
+
+            <div class="form-group">
+              <label for="question5">1(strongly disagree) to 5 (strongly agree)</label>
+              <select class="form-control" id="question5">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+
+            <h4>The US should prioritize investments in green energy</h4>
+
+            <div class="form-group">
+              <label for="question6">1(strongly disagree) to 5 (strongly agree)</label>
+              <select class="form-control" id="question6">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+
+            <h4>The richest Americans should pay more in taxes</h4>
+
+            <div class="form-group">
+              <label for="question7">1(strongly disagree) to 5 (strongly agree)</label>
+              <select class="form-control" id="question7">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+
+            <h4>The US should expand Obamacare and other health insurance programs</h4>
+
+            <div class="form-group">
+              <label for="question8">1(keep the status quo) to 5 (Universal Coverage)</label>
+              <select class="form-control" id="question8">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+
+            <h4>The US should do more to regulate guns</h4>
+
+            <div class="form-group">
+              <label for="question9">1(strongly disagree) to 5 (strongly agree)</label>
+              <select class="form-control" id="question9">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+
+            <h4>Stronger sentences are not an effective deterrent against crime</h4>
+
+            <div class="form-group">
+              <label for="question10">1(strongly disagree) to 5 (strongly agree)</label>
+              <select class="form-control" id="question10">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+
             <button type="submit" class="submit btn btn-primary">Submit</button>
           </form>
         </div>
@@ -85,46 +176,25 @@ $(".submit").on("click", function(event) {
     
     event.preventDefault();
 
-    var q1 = $("#question1").val().trim()
-    var q2 = $("#question2").val().trim()
-    console.log(q1, q2)
-    // var newFriend = {
-    // name: "fooer",
-    // photo: "foo.net",
-    // scores: [
-    
-    // $("#question2").val().trim(),
-    // $("#question4").val().trim(),
-    // ]
-    // }
+       var newUser = {
+           name: "fooer",
+           description: "he's the one who foos",
+           scores: [
+           $("#question1").val().trim(),
+           $("#question2").val().trim(),
+           $("#question3").val().trim(),
+           $("#question4").val().trim(),
+           $("#question5").val().trim(),
+           $("#question6").val().trim(),
+           $("#question7").val().trim(),
+           $("#question8").val().trim(),
+           $("#question9").val().trim(),
+           $("#question3").val().trim(),
+           ]
+       }
 
-    // console.log(newFriend);
-
-    // This line is the magic. It"s very similar to the standard ajax function we used.
-    // Essentially we give it a URL, we give it the object we want to send, then we have a "callback".
-    // The callback is the response of the server. In our case, we set up code in api-routes that "returns" true or false
-    // depending on if a tables is available or not.
-
-    // $.post("/api/tables", newReservation,
-    //   function(data) {
-
-    //     // If a table is available... tell user they are booked.
-    //     if (data) {
-    //       alert("Yay! You are officially booked!");
-    //     }
-
-    //     // If a table is available... tell user they on the waiting list.
-    //     else {
-    //       alert("Sorry you are on the wait list");
-    //     }
-
-    //     // Clear the form when submitting
-    //     $("#reserve-name").val("");
-    //     $("#reserve-phone").val("");
-    //     $("#reserve-email").val("");
-    //     $("#reserve-unique-id").val("");
-
-    //   });
-
+    $.post("/api/friends", newUser, function(data) {
+        console.log(data)
+    })
   });
 </script>
