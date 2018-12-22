@@ -24,7 +24,6 @@ module.exports = function(app) {
   app.post("/api/voters", function(req, res) {
     var user = req.body;
     var scores = user.scores;
-    voters.push(user)
     var userScore = [];
     scores.forEach(function(score) {
       userScore.push(parseInt(score));
@@ -53,6 +52,16 @@ module.exports = function(app) {
         };
       }
     }
+    newVoter = {
+      name: user.name,
+      photo: user.photo,
+      description: user.description,
+      scores: user.scores,
+      matchedPolitician: bestMatch.name 
+    }
+    
+    console.log(newVoter)
+    voters.push(newVoter)
     res.json(bestMatch);
   });
 };
