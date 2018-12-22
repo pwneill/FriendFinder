@@ -26,28 +26,21 @@ module.exports = function(app) {
       var pol = userData[j];
       var scoreDiff = 0;
 
-      for (i = 0; i < 9; i++) {
+      for (i = 0; i < 10; i++) {
         scoreDiff += Math.abs(pol.scores[i] - userScore[i]);
-        // console.log(scoreDiff);
       }
 
       if (
         scoreDiff < bestMatch.scoreDiff ||
         bestMatch.scoreDiff === undefined
       ) {
-        bestMatch = pol;
-        bestMatch.scoreDiff = scoreDiff;
-      } else {
-      }
-      // console.log(scoreDiff)
-      // console.log("\n----------------------------\n")
-      // console.log(req.body);
-      // userData.push(req.body);
-      // res.json(true);
-      // console.log(userData)
+        bestMatch = {
+          name: pol.name,
+          description: pol.description,
+          scores: pol.scores,
+          scoreDiff: scoreDiff
+      }} 
     }
-
-    console.log(bestMatch)
     res.json(bestMatch)
   });
 };
