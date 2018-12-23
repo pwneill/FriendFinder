@@ -17,6 +17,10 @@
     "url": "https://github.com/pwneill/FriendFinder/issues"
   },
   "homepage": "https://github.com/pwneill/FriendFinder#readme",
+  "engines": {
+    "node": "^10.7.2",
+    "npm": "^6.5.0"
+  },
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.4"
