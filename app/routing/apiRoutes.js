@@ -4,10 +4,10 @@ var voters = require("../data/voters.js");
 
 var bodyParser = require("body-parser");
 
+// app.use(bodyParser.json()); // for parsing application/json
+// app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
+
   module.exports = function(app) {
-    
-    app.use(bodyParser.json()); // for parsing application/json
-    app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 
     // A GET route with the url /api/candidates. This will be used to display a JSON of all possible candidates.
     app.get("/api/candidates", function(req, res) {
