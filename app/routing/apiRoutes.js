@@ -14,6 +14,20 @@ var bodyParser = require("body-parser");
       res.json(candidates);
       // console.log(candidates);
     });
+
+    app.get("/api/voters/:candidate", function(req, res) {
+
+      var similarVoters = [];
+
+      for (i = 0; i < voters.length; i++) {
+        var candidate = voters[i].matchedPolitician.replace(/\s/g, '').toLowerCase()
+        console.log(candidate)
+        if (candidate === req.params.candidate) {
+          similarVoters.push(voters[i])
+        }
+      }
+      res.json(similarVoters)
+    })
   
     // A GET route with the url /api/voters. This will be used to display a JSON of all possible voters.
     app.get("/api/voters", function(req, res) {
