@@ -6,7 +6,7 @@ var userData = [
     scores: [3, 2, 3, 3, 2, 3, 4, 4, 2, 3],
   },
   {
-    name: "Beto O&#8217;Rourke",
+    name: "Beto ORourke",
     photo: "https://raw.githubusercontent.com/pwneill/FriendFinder/master/app/images/betoorourke.jpg",
     description: "Beto O'Rourke is a US Congressman from El Paso, Texas. At 37 years of age, Beto is the youngest candidate considering a run for president. Beto became famous in 2018 running against Ted Cruz for US Senate and ran on a platform that included Medicare for All and pledging not to take corporate PAC money.",
     scores: [1, 5, 4, 4, 3, 3, 4, 3, 4, 4]

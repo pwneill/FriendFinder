@@ -1,4 +1,9 @@
-.modal-title h5{
-    margin: auto;
-    text-align: center;
-    }
+.modal-title h5 {
+  margin: auto;
+  text-align: center;
+}
+
+.modal-img {
+  max-width: 90%;
+  max-height: 200px;
+}
