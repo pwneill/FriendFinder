@@ -1,4 +1,4 @@
-# Friend Finder - Node and Express Servers
+# Candidate Finder - Node and Express Servers
 
 ### Overview
 
